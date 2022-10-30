@@ -1,4 +1,6 @@
 import React from "react";
+import WeatherInfo from "./WeatherInfo.js";
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Weather() {
@@ -16,6 +18,7 @@ export default function Weather() {
           </div>
         </div>
       </form>
+      <WeatherInfo />
     </div>
   );
 }
