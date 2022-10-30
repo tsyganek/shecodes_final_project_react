@@ -10,7 +10,7 @@ export default function Weather() {
             <input className="searchField form-control" type="text" />
           </div>
           <div className="col-2">
-            <button type="submit" class="btn success-button">
+            <button type="submit" class="btn btn-success">
               Submit
             </button>
           </div>
