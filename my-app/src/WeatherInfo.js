@@ -2,34 +2,36 @@ import React from "react";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
+import Weather from "./Weather";
 
-export default function WeatherInfo() {
+export default function WeatherInfo(props) {
   return (
     <div className="mainWeatherBlock">
-      <h1 className="cityName">Kyiv</h1>
+      <h1 className="cityName">{props.data.city}</h1>
       <ul>
-        <li classname="localTime">Local time</li>
-        <li className="currentWeather">sunny</li>
-        <li className="sunset">sunrise time: 6.00</li>
-        <li className="sunrise">sunset time: 20.00</li>
+        <li classname="localTime">{props.date}</li>
+        <li className="currentWeather">{props.data.description}</li>
+        <li className="sunset">sunrise time: {props.sunrise}</li>
+        <li className="sunrise">sunset time: {props.sunset}</li>
         <div className="row weatherBlock">
           <div className="col-3">
             <img src={logo} />
           </div>
           <div className="col-2">
-            <span className="currentTemperature">11</span>
+            <span className="currentTemperature">{props.data.temperature}</span>
           </div>
           <div className="col-2">
+            <div> </div>
             <span className="degrees">°C</span>{" "}
             <span className="degrees">|</span>{" "}
             <span className="degrees">°F</span>
           </div>
           <div className="col-3">
             <ul className="weatherData">
-              <li>Feels like: 10°</li>
-              <li>Humidity: 77%</li>
-              <li>Wind: 0.89km/h</li>
-              <li>Visibility: 1000</li>
+              <li>Feels like: {props.data.feelsLike}°</li>
+              <li>Humidity: {props.data.humidity}%</li>
+              <li>Wind: {props.data.wind}km/h</li>
+              {/* <li>Visibility: {props.data.visibility}</li> */}
             </ul>
           </div>
         </div>
