@@ -41,7 +41,8 @@ ul {
 }
 
 span {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .cityName {
@@ -58,4 +59,8 @@ span {
 
 .localTime {
   font-weight: 700;
+}
+
+.currentWeather {
+  font-weight: bold;
 }

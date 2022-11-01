@@ -2,12 +2,13 @@ import React from "react";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
-import Weather from "./Weather";
 
 export default function WeatherInfo(props) {
   return (
     <div className="mainWeatherBlock">
-      <h1 className="cityName">{props.data.city}</h1>
+      <h1 className="cityName">
+        {props.data.city}, {props.data.country}
+      </h1>
       <ul>
         <li classname="localTime">{props.date}</li>
         <li className="currentWeather">{props.data.description}</li>
@@ -31,7 +32,7 @@ export default function WeatherInfo(props) {
               <li>Feels like: {props.data.feelsLike}°</li>
               <li>Humidity: {props.data.humidity}%</li>
               <li>Wind: {props.data.wind}km/h</li>
-              {/* <li>Visibility: {props.data.visibility}</li> */}
+              <li>Visibility: {props.data.visibility}</li>
             </ul>
           </div>
         </div>

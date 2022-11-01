@@ -19,6 +19,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
+      country: response.data.sys.country,
       icon: response.data.weather.icon,
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunrise * 1000),
