@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FriendlyDate from "./FriendlyDate.js";
-import SunriseTime from "./SunriseTime.js";
+import SunTime from "./SunriseTime.js";
 
 export default function WeatherInfo(props) {
   return (
@@ -18,9 +18,11 @@ export default function WeatherInfo(props) {
         </li>
         <li className="currentWeather">{props.data.description}</li>
         <li className="sunset">
-          sunrise time: <SunriseTime date={props.data.sunrise} />
+          sunrise time: <SunTime date={props.data.sunrise} />
         </li>
-        <li className="sunrise">sunset time: {props.sunset}</li>
+        <li className="sunrise">
+          sunset time: <SunTime date={props.data.sunset} />
+        </li>
         <div className="row weatherBlock">
           <div className="col-3">
             <img
