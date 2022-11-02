@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "./logo.svg";
+import FriendlyDate from "./FriendlyDate.js";
 
 export default function WeatherInfo(props) {
   return (
@@ -10,13 +10,19 @@ export default function WeatherInfo(props) {
         {props.data.city}, {props.data.country}
       </h1>
       <ul>
-        <li classname="localTime">{props.date}</li>
+        <li classname="localTime">
+          <b>
+            <FriendlyDate date={props.data.date} />
+          </b>
+        </li>
         <li className="currentWeather">{props.data.description}</li>
         <li className="sunset">sunrise time: {props.sunrise}</li>
         <li className="sunrise">sunset time: {props.sunset}</li>
         <div className="row weatherBlock">
           <div className="col-3">
-            <img src={logo} />
+            <img
+              src={`http://openweathermap.org/img/wn/${props.data.icon}.png`}
+            />
           </div>
           <div className="col-2">
             <span className="currentTemperature">{props.data.temperature}</span>
