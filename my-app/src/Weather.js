@@ -9,7 +9,7 @@ export default function Weather(props) {
   let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data.weather.icon);
+    console.log(response.data.sys.sunrise);
     setWeather({
       ready: true,
       temperature: Math.round(response.data.main.temp),
