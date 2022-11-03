@@ -6,6 +6,7 @@ import SunTime from "./SunTime.js";
 import WeatherIcon from "./WeatherIcon.js";
 
 export default function WeatherInfo(props) {
+  console.log(props.data.icon);
   return (
     <div className="mainWeatherBlock">
       <h1 className="cityName">
