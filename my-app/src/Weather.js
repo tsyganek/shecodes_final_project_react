@@ -23,6 +23,8 @@ export default function Weather(props) {
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
       visibility: response.data.visibility,
+      main: response.data.weather[0].main,
+      id: response.data.weather[0].id,
     });
   }
 

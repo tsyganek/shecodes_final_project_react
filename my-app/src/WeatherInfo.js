@@ -7,7 +7,7 @@ import WeatherIcon from "./WeatherIcon.js";
 import Temperature from "./Temperature.js";
 
 export default function WeatherInfo(props) {
-  console.log(props.data.icon);
+  console.log(props.data.id);
   return (
     <div className="mainWeatherBlock">
       <h1 className="cityName">
@@ -28,7 +28,7 @@ export default function WeatherInfo(props) {
         </li>
         <div className="row weatherBlock">
           <div className="col-3">
-            <WeatherIcon date={props.data.icon} />
+            <WeatherIcon icon={props.data.icon} />
           </div>
           <Temperature celcius={props.data.temperature} />
           <div className="col-3">
