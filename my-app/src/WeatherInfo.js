@@ -5,6 +5,7 @@ import FriendlyDate from "./FriendlyDate.js";
 import SunTime from "./SunTime.js";
 import WeatherIcon from "./WeatherIcon.js";
 import Temperature from "./Temperature.js";
+import FeelsLike from "./FeelsLike.js";
 
 export default function WeatherInfo(props) {
   console.log(props.data.id);
@@ -33,7 +34,9 @@ export default function WeatherInfo(props) {
           <Temperature celcius={props.data.temperature} />
           <div className="col-3">
             <ul className="weatherData">
-              <li>Feels like: {props.data.feelsLike}°</li>
+              <li>
+                <FeelsLike celcius={props.data.feelslike} />
+              </li>
               <li>Humidity: {props.data.humidity}%</li>
               <li>Wind: {props.data.wind}km/h</li>
               <li>Visibility: {props.data.visibility}</li>
